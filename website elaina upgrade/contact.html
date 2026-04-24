@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ CONTACT — ELAINA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Nunito:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<canvas id="particles"></canvas>
+
+<div class="music-player" id="musicPlayer">
+  <div class="music-disc" id="musicDisc">🎵</div>
+  <div class="music-info">
+    <span class="music-title">Elaina's Theme</span>
+    <span class="music-sub">Wandering Witch OST</span>
+  </div>
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()">▶</button>
+  <audio id="bgMusic" loop>
+    <source src="kelabu.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<div class="cursor-star" id="cursorStar">✦</div>
+
+<div class="page-wrapper">
+  <nav class="navbar">
+    <div class="nav-logo">✦ ELAINA ✦</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">HOME</a></li>
+      <li><a href="about.html" class="nav-link">ABOUT</a></li>
+      <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
+    </ul>
+    <div class="nav-heart" onclick="addLove()">
+      <span id="heartIcon">🤍</span>
+      <span id="loveCount">0</span>
+    </div>
+  </nav>
+
+  <<section class="contact-section">
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i></div>
+      <h3>WhatsApp</h3>
+      <p>Ga percaya kalo gue pacar nya Elaina? Chat langsung aja!</p>
+      <a href="https://wa.me/6285640537446" target="_blank" class="hero-btn" style="margin-top:1.5rem; display:inline-flex;">
+        <span class="btn-glow"></span>
+        <span>📱 CHAT SEKARANG TRI KELABU</span>
+      </a>
+    </div>
+
+    <div class="contact-divider">✦</div>
+
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fa-brands fa-instagram" style="color: #E1306C;"></i></div>
+      <h3>Instagram</h3>
+      <p>Kepoin keseharian dan foto-foto gue bareng waifu tercinta di IG!</p>
+      <a href="https://instagram.com/tri_kelabu1809" target="_blank" class="hero-btn" style="margin-top:1.5rem; display:inline-flex; background: linear-gradient(135deg, #f59e0b, #ec4899);">
+        <span class="btn-glow"></span>
+        <span>📸 FOLLOW IG GW DONG</span>
+      </a>
+    </div>
+
+    <div class="contact-divider">✦</div>
+
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fa-brands fa-tiktok" style="color: #ffffff; text-shadow: 2px 2px 0px #ff0050, -2px -2px 0px #00f2fe;"></i></div>
+      <h3>TikTok</h3>
+      <p>Tonton momen mesra atau editan Elaina di TikTok gue.</p>
+      <a href="https://tiktok.com/@otasusuki" target="_blank" class="hero-btn" style="margin-top:1.5rem; display:inline-flex; background: linear-gradient(135deg, #111827, #374151);">
+        <span class="btn-glow"></span>
+        <span>🎵 MAMPIR TIKTOK KU DULU GA SIH</span>
+      </a>
+    </div>
+
+    <div class="contact-divider">✦</div>
+
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fa-solid fa-envelope-open-text" style="color: #c084fc;"></i></div>
+      <h3>Pesan Langsung</h3>
+      <p>Atau tinggalin pesan di buku tamu elaina kita di halaman Home!</p>
+      <a href="index.html#guestbook" class="hero-btn" style="margin-top:1.5rem; display:inline-flex; background: linear-gradient(135deg, #c084fc, #a78bfa);">
+        <span class="btn-glow"></span>
+        <span>📖 BUKU TAMU</span>
+      </a>
+    </div>
+
+    <div class="contact-divider">✦</div>
+
+    <section class="challenge-section">
+    <div class="challenge-card">
+      <h3 class="challenge-title">⚠️ CHALLENGE</h3>
+      <p>Kalo lu masih ga percaya gue pacar nya Elaina, prove it dong 😤<br>
+      Chat gue dan bilang "Elaina bukan bini lu" — gue tantang!</p>
+      <a href="https://wa.me/6285640537446?text=Elaina%20bukan%20bini%20lu%20wkwk" target="_blank" class="hero-btn" style="margin-top:1.5rem; display:inline-flex; background: linear-gradient(135deg, #f472b6, #ec4899);">
+        <span class="btn-glow"></span>
+        <span>😂 TANTANG GUE</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="next-page-section">
+    <a href="index.html" class="next-link">
+      <span class="next-label">Selesai</span>
+      <h2 class="next-title"><i class="fa-solid fa-house-chimney"></i> Balik ke Home</h2>
+    </a>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-text">✦ TERIMA KASIH KAWAN ✦</p>
+    <p class="footer-sub">Made with 💜 for Elaina Kelabu</p>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ ABOUT — ELAINA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Nunito:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="particles"></canvas>
+
+<div class="music-player" id="musicPlayer">
+  <div class="music-disc" id="musicDisc">🎵</div>
+  <div class="music-info">
+    <span class="music-title">Elaina's Theme</span>
+    <span class="music-sub">Wandering Witch OST</span>
+  </div>
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()">▶</button>
+  <audio id="bgMusic" loop>
+    <source src="elaina-kelabu.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<div class="cursor-star" id="cursorStar">✦</div>
+
+<div class="page-wrapper">
+  <nav class="navbar">
+    <div class="nav-logo">✦ ELAINA ✦</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">HOME</a></li>
+      <li><a href="about.html" class="nav-link active">ABOUT</a></li>
+      <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+    <div class="nav-heart" onclick="addLove()">
+      <span id="heartIcon">🤍</span>
+      <span id="loveCount">0</span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="hero-glow"></div>
+    <p class="hero-eyebrow">✦ — The one — ✦</p>
+    <h1 class="hero-title">ABOUT MY BINI</h1>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <section class="about-section">
+    <div class="about-image-col">
+      <div class="about-img-wrap">
+        <div class="image-ring ring1"></div>
+        <div class="image-ring ring2"></div>
+        <img src="elaina_topi.png" 
+             class="about-img" alt="Elaina" />
+      </div>
+    </div>
+    <div class="about-text-col">
+      <h2 class="about-name">✦ Elaina ✦</h2>
+      <p class="about-tagline">Penyihir Pengembara | Waifu Terbaik</p>
+
+      <div class="about-facts">
+        <div class="fact-item">
+          <span class="fact-icon">📔</span>
+          <div>
+            <strong>Profesi</strong>
+            <p>Penyihir Abu</p>
+          </div>
+        </div>
+        <div class="fact-item">
+          <span class="fact-icon">💜</span>
+          <div>
+            <strong>Status</strong>
+            <p>MY BINI GW ♥</p>
+          </div>
+        </div>
+        <div class="fact-item">
+          <span class="fact-icon">⭐</span>
+          <div>
+            <strong>Anime</strong>
+            <p>Majo no Tabitabi</p>
+          </div>
+        </div>
+        <div class="fact-item">
+          <span class="fact-icon">✨</span>
+          <div>
+            <strong>Ciri Khas</strong>
+            <p>Rambut silver, mata ungu, topi penyihir,cantik,imut</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://youtu.be/_u-hNJepgeQ?si=0aLOzLKurmCUKQlR" target="_blank" class="hero-btn" style="margin-top: 2rem; display: inline-flex;">
+        <span class="btn-glow"></span>
+        <span>😘 LIHAT MY BINI DISINI</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- QUOTE SECTION -->
+  <section class="quote-section">
+    <blockquote class="big-quote">
+      "Dunia ini luas, tapi hati gue cuma cukup buat satu — Elaina."
+    </blockquote>
+    <p class="quote-author">— Pemilik Website Ini</p>
+  </section>
+
+  <section class="next-page-section">
+    <a href="contact.html" class="next-link">
+      <span class="next-label">Selanjutnya</span>
+      <h2 class="next-title">Hubungi Gue <i class="fa-solid fa-arrow-right-long"></i></h2>
+    </a>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-text">✦ TERIMA KASIH KAWAN ✦</p>
+    <p class="footer-sub">Made with 💜 for Elaina Kelabu</p>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

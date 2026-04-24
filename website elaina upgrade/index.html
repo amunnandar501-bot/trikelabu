@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ ELAINA — MY BINI ✨</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Nunito:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+
+<!-- ✨ PARTICLES CANVAS -->
+<canvas id="particles"></canvas>
+
+<!-- 🎵 MUSIC PLAYER -->
+<div class="music-player" id="musicPlayer">
+  <div class="music-disc" id="musicDisc">🎵</div>
+  <div class="music-info">
+    <span class="music-title">Elaina's Theme</span>
+    <span class="music-sub">Wandering Witch OST</span>
+  </div>
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()">▶</button>
+  <audio id="bgMusic" loop>
+    <!-- Ganti src dengan link musik kamu -->
+    <source src="majo-no-tabi-tabi.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<!-- 🌟 CURSOR SPARKLE -->
+<div class="cursor-star" id="cursorStar">✦</div>
+
+<div class="page-wrapper">
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-logo">✦ ELAINA ✦</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active">HOME</a></li>
+      <li><a href="about.html" class="nav-link">ABOUT</a></li>
+      <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+    <div class="nav-heart" onclick="addLove()">
+      <span id="heartIcon">🤍</span>
+      <span id="loveCount">0</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">✦ — Dedicated to my one and only — ✦</p>
+      <h1 class="hero-title">MY BINI</h1>
+      <h2 class="hero-subtitle">E L A I N A</h2>
+      <p class="hero-desc">Penyihir tercantik di dunia, dan yang tercinta di hati gue 💜</p>
+
+      <a href="https://youtu.be/_nAObEu6UJc?si=RT9cYr3ULj2682gv" target="_blank" class="hero-btn">
+        <span class="btn-glow"></span>
+        <span>👀 LIHAT MY BINI</span>
+      </a>
+    </div>
+
+    <div class="hero-image-wrap">
+      <div class="image-ring ring1"></div>
+      <div class="image-ring ring2"></div>
+      <img src="https://then-peach-yuyzookdlp.edgeone.app/Elaina%20Banner%20by%20Shora.png" 
+           class="hero-img" alt="Elaina Banner" />
+    </div>
+  </section>
+
+  <!-- LOVE COUNTER SECTION -->
+  <section class="love-section">
+    <div class="love-card">
+      <p class="love-label">Total Cinta Dari Elaina</p>
+      <div class="love-number" id="loveBig">0</div>
+      <button class="love-btn" onclick="addLove()">Kasih Cinta Elaina 💜</button>
+    </div>
+    <div class="love-card">
+      <p class="love-label">Pengunjung Website Ini</p>
+      <div class="love-number" id="visitorCount">0</div>
+      <p class="love-sub">orang udah mampir</p>
+    </div>
+    <div class="love-card">
+      <p class="love-label">Hari Bareng Elaina</p>
+      <div class="love-number" id="dayCount">∞</div>
+      <p class="love-sub">dan seterusnya</p>
+    </div>
+  </section>
+
+  <!-- GUESTBOOK -->
+  <section class="guestbook">
+    <h2 class="section-title">✦ BUKU TAMU ELAINA ✦</h2>
+    <p class="section-sub">Tinggalin pesan buat Elaina & pemilik website ini!</p>
+
+    <div class="guestbook-form">
+      <input type="text" id="gbName" placeholder="Nama kamu..." maxlength="30" />
+      <textarea id="gbMsg" placeholder="Pesan kamu..." maxlength="150" rows="3"></textarea>
+      <div class="form-footer">
+        <span id="charCount">0/150</span>
+        <button onclick="submitMessage()">Kirim Pesan 💌</button>
+      </div>
+    </div>
+
+    <div class="messages-grid" id="messagesGrid">
+      <!-- Messages loaded here -->
+    </div>
+  </section>
+
+  <section class="next-page-section">
+    <a href="about.html" class="next-link">
+      <span class="next-label">Selanjutnya</span>
+      <h2 class="next-title">Tentang Elaina MY BINI GW 🌷<i class="fa-solid fa-arrow-right-long"></i></h2>
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-text">✦ TERIMA KASIH KAWAN ✦</p>
+    <p class="footer-sub">Made with 💜 for Elaina Kelabu</p>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
