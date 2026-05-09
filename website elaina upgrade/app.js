@@ -247,11 +247,11 @@ if (gbName) gbName.addEventListener('keydown', (e) => { if (e.key === 'Enter') d
 if (gbMsg)  gbMsg.addEventListener('keydown', (e) => { if (e.key === 'Enter' && e.ctrlKey) submitMessage(); });
 
 // ---- INIT ----
-renderMessages();
+loadKomentarFirebase();
 
 // Auto-refresh messages every 10s (simulates multi-user)
 setInterval(() => {
-  renderMessages();
+  loadKomentarFirebase();
   const visEl = document.getElementById('visitorCount');
   if (visEl) visEl.textContent = parseInt(localStorage.getItem('elaina_visitors')||'0').toLocaleString();
 }, 10000);
@@ -267,3 +267,75 @@ document.querySelectorAll('.love-card, .msg-card, .fact-item, .contact-card').fo
   el.style.animationPlayState = 'paused';
   observer.observe(el);
 });
+
+// Tambahkan di akhir file app.js kamu
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDt8fxm0xyJlGlgPaKfSst5gkoQxaJ3oeg",
+    authDomain: "trikelabu.firebaseapp.com",
+    projectId: "trikelabu",
+    storageBucket: "trikelabu.firebasestorage.app",
+    messagingSenderId: "211864611486",
+    appId: "1:211864611486:web:cd8a9e31d7fd836912a98f",
+    measurementId: "G-95WNVNBSJE"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+async function loadKomentarFirebase() {
+    const grid = document.getElementById('messagesGrid');
+    if (!grid) return;
+
+    const querySnapshot = await getDocs(collection(db, "komentar"));
+
+    let html = '';
+
+    querySnapshot.forEach((doc) => {
+        const data = doc.data();
+
+        html += `
+        <div class="msg-card">
+            <div class="msg-header">
+                <div class="msg-avatar">✨</div>
+                <div>
+                    <div class="msg-name">${data.nama || 'Tanpa Nama'}</div>
+                </div>
+            </div>
+            <div class="msg-text">${data.isi || ''}</div>
+        </div>
+        `;
+    });
+
+    grid.innerHTML = html;
+}
+
+// Fungsi Kirim Pesan (Buku Tamu)
+// Pastikan di index.html kamu ada: <button id="btnKirim">
+const btnKirim = document.getElementById('btnKirim');
+if(btnKirim) {
+    btnKirim.addEventListener('click', async () => {
+        const nama = document.getElementById('inputNama').value;
+        const pesan = document.getElementById('inputPesan').value;
+
+        try {
+            await addDoc(collection(db, "komentar"), {
+                nama: nama,
+                isi: pesan,
+                waktu: serverTimestamp()
+            });
+            loadKomentarFirebase();
+          alert("Pesan berhasil dikirim! ✨");
+        } catch (e) {
+            console.error("Error: ", e);
+            alert("Gagal kirim pesan.");
+        }
+    });
+}

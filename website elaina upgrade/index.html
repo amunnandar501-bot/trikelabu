@@ -94,13 +94,14 @@
     <p class="section-sub">Tinggalin pesan buat Elaina & pemilik website ini!</p>
 
     <div class="guestbook-form">
-      <input type="text" id="gbName" placeholder="Nama kamu..." maxlength="30" />
-      <textarea id="gbMsg" placeholder="Pesan kamu..." maxlength="150" rows="3"></textarea>
-      <div class="form-footer">
-        <span id="charCount">0/150</span>
-        <button onclick="submitMessage()">Kirim Pesan 💌</button>
-      </div>
-    </div>
+     <input type="text" id="inputNama" placeholder="Nama kamu..." maxlength="30" />
+
+<textarea id="inputPesan" placeholder="Pesan kamu..." maxlength="150" rows="3"></textarea>
+
+<div class="form-footer">
+  <span id="charCount">0/150</span>
+  <button id="btnKirim">Kirim Pesan 💌</button>
+</div>
 
     <div class="messages-grid" id="messagesGrid">
       <!-- Messages loaded here -->
@@ -121,6 +122,7 @@
   </footer>
 </div>
 
-<script src="app.js"></script>
+<script type="module" src="app.js"></script>
+
 </body>
 </html>
